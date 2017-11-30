@@ -1,0 +1,42 @@
+POLITICAL CLASSIFIER DESIGN
+Charles Winston
+
+
+OVERVIEW
+  The final product will be a web application with a text box, which classifies
+  entered text as either republican or democrat, along with a confidence score.
+
+COMPONENTS
+  Training data
+    - Tweets from:
+        senators,
+        political commentators,
+        activists,
+        normal people (hard to get labels)
+    - Tools:
+      - Twitter API and corresponding Python client library
+    TODO:
+      - gather data from political commentators, activists, and normal people
+      - save data in BigTable database
+      - SANITIZE TEXT
+  Classifier
+    - TensorFlow neural networks
+      - Supervised learning
+      - Sequential, maybe later use recurrent or convolutional
+    - Features:
+      - Sentiment
+      - Mentioned entities
+      - Word vectors
+    TODO:
+      - Build classifier...
+  Server
+    - Google Cloud App Engine
+    - Flask, Python
+    TODO:
+      - Build website
+        - Hard part: text box (not even though)
+  Database
+    - Google Cloud BigTable
+    - Use Google's BigTable Python client library
+    TODO:
+      - Start this

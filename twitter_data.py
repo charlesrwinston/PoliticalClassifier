@@ -44,9 +44,9 @@ def main():
         screen_name = user[0]
         party = user[1]
         result = twitter.statuses.user_timeline(screen_name=screen_name, count=TWEET_COUNT)
-        tweets[party][screen_name] = result
-        for tweet in result:
-            f.write(party + '\t' + screen_name + '\t' + json.dumps(tweet) + '\n\n')
+        tweets[party][screen_name] = [tweet['text'] for tweet in result if 'text' in tweet]
+
+    f.write(json.dumps(tweets, indent=2))
 '''
     # Initialize a database to store the twitter data
     client = Client(project='political-classifier', admin=True)
