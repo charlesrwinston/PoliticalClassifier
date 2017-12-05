@@ -1,6 +1,10 @@
-runtime: python27
+runtime: python
+env: flex
 api_version: 1
 threadsafe: true
 handlers:
 - url: /.*
   script: main.app
+skip_files:
+- data-files/
+- classifier/

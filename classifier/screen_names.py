@@ -1,0 +1,126 @@
+# screen_names.py
+#   Contains lists of users' screen names used for training data
+
+# List of pairs of screen names and part label for US senators
+senators = [
+    # Republicans
+    ('SenatorStrange', 'R'),   # Luther Strange (R-AL)
+    ('SenJohnKennedy', 'R'),   # John N. Kenendy (R-LA)
+    ('SenThomTillis', 'R'),    # Thom Tillis (R-NC)
+    ('SenSasse', 'R'),         # Ben Sasse (R-NE)
+    ('SenatorRounds', 'R'),    # Mike Rounds (R-SD)
+    ('SenDanSullivan', 'R'),   # Dan Sullivan (R-AK)
+    ('sendavidperdue', 'R'),   # David Perdue (R-GA)
+    ('SenJoniErnst', 'R'),     # Joni Ernst (R-IA)
+    ('SenateMajLdr', 'R'),     # Mitch McConnell (R-KY) (Majority Leader)
+    ('SenatorRisch', 'R'),     # Jim Risch (R-ID)
+    ('SenTedCruz', 'R'),       # Ted Cruz (R-TX)
+    ('SenatorFischer', 'R'),   # Deb Fischer (R-NE)
+    ('SenTomCotton', 'R'),     # Tom Cotton (R-AR)
+    ('MikeCrapo', 'R'),        # Mike Crapo (R-ID)
+    ('SenThadCochran', 'R'),   # Thad Cochran (R-MS)
+    ('LindseyGrahamSC', 'R'),  # Lindsey Graham (R-SC)
+    ('SenJohnHoeven', 'R'),    # John Hoeven (R-ND)
+    ('SenJohnThune', 'R'),     # John Thune (R-SD)
+    ('SenatorEnzi', 'R'),      # Mike Enzi (R-WY)
+    ('SenDeanHeller', 'R'),    # Dean Heller (R-NV)
+    ('SenatorWicker', 'R'),    # Roger Wicker (R-MS)
+    ('senorrinhatch', 'R'),    # Orrin Hatch (R-UT)
+    ('RonWyden', 'R'),         # Ron Wyden (R-OR)
+    ('SenCoryGardner', 'R'),   # Cory Gardner (R-CO)
+    ('SenToddYoung', 'R'),     # Todd Young (R-IN)
+    ('SenRonJohnson', 'R'),    # Ron Johnson (R-WI)
+    ('SenatorLankford', 'R'),  # James Lankford (R-OK)
+    ('SenToomey', 'R'),        # Pat Toomey (R-PA)
+    ('SenatorTimScott', 'R'),  # Tim Scott (R-SC)
+    ('RandPaul', 'R'),         # Rand Paul (R-KY)
+    ('SenJohnBarrasso', 'R'),  # John Barrasso (R-WY)
+    ('SenCapito', 'R'),        # Shelley Moore Capito (R-WV)
+    ('SenatorIsakson', 'R'),   # Johnny Isakson (R-GA)
+    ('SenAlexander', 'R'),     # Lamar Alexander (R-TN)
+    ('SenPatRoberts', 'R'),    # Pat Roberts (R-KS)
+    ('SenBobCorker', 'R'),     # Bob Corker (R-TN)
+    ('BillCassidy', 'R'),      # Bill Cassidy (R-LA)
+    ('RoyBlunt', 'R'),         # Roy Blunt (R-MO)
+    ('SenatorBurr', 'R'),      # Richard Burr (R-NC)
+    ('SenShelby', 'R'),        # Richard Shelby (R-AL)
+    ('SenatorCollins', 'R'),   # Susan Collins (R-ME)
+    ('SenJohnMcCain', 'R'),    # John McCain (R-AZ)
+    ('senrobportman', 'R'),    # Rob Portman (R-OH)
+    ('JerryMoran', 'R' ),      # Jerry Moran (R-KS)
+    ('lisamurkowski', 'R'),    # Lisa Murkowski (R-AK)
+    ('JeffFlake', 'R'),        # Jeff Flake (R-AZ)
+    ('marcorubio', 'R'),       # Marco Rubio (R-FL)
+    ('JohnCornyn', 'R'),       # John Cornyn (R-TX)
+    ('SteveDaines', 'R'),      # Steve Daines (R-MT)
+    ('ChuckGrassley', 'R'),    # Chuck Grassley (R-IA)
+    ('JimInhofe', 'R'),        # Jim Inhofe (R-OK)
+    ('JohnBoozman', 'R'),      # John Boozman (R-AR)
+    ('SenMikeLee', 'R'),       # Mike Lee (R-UT)
+
+
+    # Democrats
+    ('SenCortezMasto', 'D'),   # Cortez MAsto (D-NV)
+    ('SenKamalaHarris', 'D'),  # Kamala Harris (D-CA)
+    ('SenBrianSchatz', 'D'),   # Brian Schatz (D-HI)
+    ('MartinHeinrich', 'D'),   # Martin Heinrich (D-NM)
+    ('SenatorBaldwin', 'D'),   # Tammy Baldwin (D-WI)
+    ('SenatorHeitkamp', 'D'),  # Heidi Heitkamp (D-ND)
+    ('SenDuckworth', 'D'),     # Tammy Duckworth (D-IL)
+    ('SenWarren', 'D'),        # Elizabeth Warren (D-MA)
+    ('SenatorHassan', 'D'),    # Maggie Hassan (D-NH)
+    ('SenatorTester', 'D'),    # Jon Tester (D-MT)
+    ('SenJackReed', 'D'),      # Jack Reed (D-RI)
+    ('SenFeinstein', 'D'),     # Dianne Feinstein (D-CA)
+    ('PattyMurray', 'D'),      # Patty Murray (D-WA)
+    ('SenBlumenthal', 'D'),    # Richard Blumenthal (D-CT)
+    ('SenatorCarper', 'D'),    # Tom Carper (D-DE)
+    ('SenatorDurbin', 'D'),    # Dick Durbin (D-IL)
+    ('SenatorLeahy', 'D'),     # Patrick Leahy (D-VT)
+    ('SenWhitehouse', 'D'),    # Sheldon Whitehouse (D-RI)
+    ('SenGaryPeters', 'D'),    # Gary Peters (D-MI)
+    ('Sen_JoeManchin', 'D'),   # JoeManchin (D-WV)
+    ('SenBennetCO', 'D'),      # Michael Bennet (D-CO)
+    ('SenDonnelly', 'D'),      # Joe Donnelly (D-IN)
+    ('timkaine', 'D'),         # Tim Kaine (D-VA)
+    ('SenBobCasey', 'D'),      # Bob Casey Jr. (D-PA)
+    ('ChrisMurphyCT', 'D'),   # Chris Murphy (D-CT)
+    ('SenatorCantwell', 'D'),  # Maria Cantwell (D-WA)
+    ('SenatorShaheen', 'D'),   # Jeanne Shaheen (D-NH)
+    ('SenatorCardin', 'D'),    # Ben Cardin (D-MD)
+    ('maziehirono', 'D'),      # Mazie Hirono (D-HI)
+    ('SenStabenow', 'D'),      # Debbie Stabenow (D-MI)
+    ('SenGillibrand', 'D'),    # Kirsten Gillibrand (D-NY)
+    ('SenatorTomUdall', 'D'),  # Tom Udall (D-NM)
+    ('brianschatz', 'D'),      # Brian Schatz (D-HI)
+    ('SenSherrodBrown', 'D'),  # Sherrod Brown (D-OH)
+    ('amyklobuchar', 'D'),     # Amy Klobuchar (D-MN)
+    ('SenJeffMerkley', 'D'),   # Jeff Merkley (D-OR)
+    ('SenMarkey', 'D'),        # Ed Markey (D-MA)
+    ('SenBillNelson', 'D'),    # Bill Nelson (D-FL)
+    ('stabenow', 'D'),         # Debbie Stabenow (D-MI)
+    ('SenatorMenendez', 'D'),  # Bob Menendez (D-NJ)
+    ('ChrisVanHollen', 'D'),   # Chris Van Hollen (D-MD)
+    ('SenSchumer', 'D'),       # Chuck Schumer (D-NY)
+    ('clairecmc', 'D'),        # Claire McCaskill (D-MO)
+    ('CoryBooker', 'D'),       # Corey Booker (D-NJ)
+    ('ChrisCoons', 'D'),       # Chris Coons (D-DE)
+    ('MarkWarner', 'D'),       # Mark Warner (D-VA)
+    ('alfranken', 'D'),        # Al Franken (D-MN)
+
+
+    # Independents
+    ('SenAngusKing', 'I'),     # Angus King (I-ME)
+    ('SenSanders', 'I'),       # Bernie Sanders (I-VT)
+
+
+    #'GrahamBlog',       # TODO
+    #'dscc',             # Senate Democrats
+    #'SenateGOP',        # Senate Republicans
+    #'SenateDems',       # TODO SENATE DEMS
+    #'SenateBudget',     #
+    #'SenateAgDems',     # TODO
+    #'McConnellPress',   # TODO
+    #'SenCoonsOffice',   # TODO
+
+]
