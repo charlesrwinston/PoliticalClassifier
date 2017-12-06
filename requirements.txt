@@ -1,1 +1,7 @@
-Flask==0.10.1
+Flask==0.12.2
+gunicorn==19.7.1
+google-cloud-language
+google-cloud-bigquery
+tensorflow
+tensorflow-serving-api
+numpy

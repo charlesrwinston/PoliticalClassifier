@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Political Classifier</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="header">
+      <h1>Political Classifier</h1>
+      <h5>Type your text to see if you're Republican or Democrat...</h5>
+    </div>
+    <div class="text">
+      <form method="POST" action=".">
+        <div>
+         <textarea class="post_form_id" name="fooput" value="HI"></textarea>
+        </div>
+       <div>
+         <input type="submit" value="Classify">
+       </div>
+       <div class="left-right-image">
+       {% if result == 'Republican' %}
+         <img src="{{url_for('static', filename='images/republican.png')}}" height=50% width=50%>
+       {% elif result == 'Democrat' %}
+         <img src="{{url_for('static', filename='images/democrat.png')}}" height=50% width=50%>
+       {% endif %}
+       </div>
+      </form>
+    </div>
+  </body>
+</html>
